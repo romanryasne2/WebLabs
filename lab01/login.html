@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>           
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script src="jquery.js"></script>
+    <script src="bootstrap.js"></script>  
+</head>
+<body>
+    <div class="container">
+        <form action="authorization.php" method="post">
+            <h3 class="text-center">Вхід</h3>
+
+            <div class="form-group">
+                <label>Логін:</label>
+                <input class="form-control" type="text" name="username" required />
+            </div> 
+            
+            <div class="form-group">
+                <label>Пароль:</label>
+                <input class="form-control" type="password" name="password" required />
+            </div>       
+            
+            <input class="btn btn-primary center-block" type="submit" value="Увійти" />
+        </form>
+    </div>
+</body>
+</html>
