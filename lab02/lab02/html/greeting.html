@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script src="../libs/tether.js"></script>
+    <link href="../libs/bootstrap.css" rel="stylesheet"/>
+    <script src="../libs/jquery.js"></script>
+    <script src="../libs/bootstrap.js"></script>
+    <script src="../js/scripts.js"></script>
+</head>
+<body style="background-image: url('../images/backimage.jpg'); background-repeat: no-repeat; background-size: cover">
+    <div id="current-url" class="col-xs-12">
+        <h2 class="text-center"></h2>
+    </div>
+    <div id="first-name" class="col-xs-12">
+        <h2 class="text-center"></h2>
+    </div>     
+    <!-- Modal -->
+    <div class="modal fade" id="my-dialog" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-center">Діалогове вікно</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Ім'я:</label>
+                        <input class="form-control" type="text" name="firstName" required/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="task4()">Підтвердити</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $(window).on("load", showModal);
+        task5();
+    </script>
+</body>
+</html>
