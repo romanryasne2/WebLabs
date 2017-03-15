@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0FC748F5-764F-42FB-9249-5E5DD8F5204A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>lab03</RootNamespace>
+    <AssemblyName>lab03</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="css\styles.css" />
+    <Content Include="html\ask-information.html" />
+    <Content Include="html\files-upload.html" />
+    <Content Include="html\greeting.html" />
+    <Content Include="html\images.html" />
+    <Content Include="html\reverse-text.html" />
+    <Content Include="html\jquery.html" />
+    <Content Include="html\login.html" />
+    <Content Include="images\backimage.jpg" />
+    <Content Include="images\cursor.jpg" />
+    <Content Include="images\image1.jpg" />
+    <Content Include="images\image2.jpg" />
+    <Content Include="images\onhover-image.jpg" />
+    <Content Include="images\static-image.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\scripts.js" />
+    <Content Include="js\scripts3.js" />
+    <Content Include="libs\bootstrap.css" />
+    <Content Include="libs\bootstrap.js" />
+    <Content Include="libs\jquery.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="php\authorization.php" />
+    <None Include="php\profile.php" />
+    <None Include="php\profile2.php" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
