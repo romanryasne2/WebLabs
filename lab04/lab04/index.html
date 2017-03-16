@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <link href="libs/bootstrap.css" rel="stylesheet"/>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="libs/jquery.js"></script>
+    <script src="libs/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>$(window).on("load", task1);</script>
+</head>
+<body class="with-background">
+    <div class="container">
+        <br/>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <button class="btn btn-primary center-block" onclick="location.href = './html/ask-information.html';">Заповнити анкету</button>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <button class="btn btn-primary center-block" onclick="location.href = './html/login.html';">Увійти</button>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <button class="btn btn-primary center-block" onclick="location.href = './html/files-upload.html';">Відправити файли</button>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <button class="btn btn-primary center-block" onclick="task3()">Відкрити діалогове вікно</button>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <button class="btn btn-primary center-block" onclick="location.href = './html/greeting.html';">Привітати по імені</button>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <button class="btn btn-primary center-block" onclick="location.href = './html/images.html';">Переглянути картинки</button>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <button class="btn btn-primary center-block" onclick="location.href = './html/jquery.html';">jQuery</button>
+            </div>    
+            <div class="col-xs-12 col-sm-6">
+                <button class="btn btn-primary center-block" onclick="location.href = './html/reverse-text.html';">Реверс тексту</button>
+            </div>
+        </div>  
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-primary center-block" onclick="location.href = './html/ajax.html';">Ajax</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="my-dialog" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-center">Діалогове вікно</h4>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

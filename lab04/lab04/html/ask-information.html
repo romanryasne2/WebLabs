@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <link href="../libs/bootstrap.css" rel="stylesheet"/>
+    <script src="../libs/jquery.js"></script>
+    <script src="../libs/bootstrap.js"></script>
+    <script>
+        function changeToGet() {
+            $("#form").attr("method", "get");
+        }
+
+        function changeToPost() {
+            $("#form").attr("method", "post");
+        }
+
+        function changeDestination() {
+            $("#form").attr("action", $("#destination").val());
+        }
+
+        function uploading() {
+            if (($("#imageFile").get(0).files.length !== 0) && ($("#form").attr("method") === "get")) {
+                alert("Ви відправляєте картинку. Метод відправки буде змінено на POST.");
+                changeToPost();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form id="form" action="../php/profile.php" method="get" onsubmit="uploading()">
+            <h3 class="text-center">Заповніть анкету</h3>
+
+            <div class="form-group">
+                <label>Ім'я:</label>
+                <input class="form-control" type="text" name="firstName" required/>
+            </div>
+
+            <div class="form-group">
+                <label>Прізвище:</label>
+                <input class="form-control" type="text" name="lastName" required/>
+            </div>
+            
+            <div class="form-group">
+                <label>Елетронна пошта:</label>
+                <input class="form-control" type="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+                <label>Країна:</label>
+                <select class="form-control" name="country" required> 
+                    <option value="Україна">
+                        Україна
+                    </option>
+                    <option value="Польща">
+                        Польща
+                    </option>
+                    <option value="США">
+                        США
+                    </option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Назва програми:</label>
+                <input class="form-control" type="text" name="command" required/>
+            </div>
+
+            <div class="form-group">
+                <label>Назва файлу:</label>
+                <input class="form-control" type="text" name="fileName" required pattern=".+\..+"/>
+            </div>
+                      
+            <div class="form-group">
+                <label>Картинка:</label>
+                <input id="imageFile" class="form-control" type="file" name="file" accept="image/*"/>
+            </div>
+
+            <div class="form-group">
+                <label>Виберіть метод відправки даних:</label>
+                <div>
+                    <input type="radio" name="method" onclick="changeToGet()" value="GET" checked/>GET
+                    <input type="radio" name="method" onclick="changeToPost()" value="POST"/>POST
+                </div>
+            </div>          
+            
+            <div class="form-group">
+                <label>Виберіть призначення даних:</label>
+                <select id="destination" class="form-control" onchange="changeDestination()" required>
+                    <option value="../php/profile.php">
+                        profile.php
+                    </option>
+                    <option value="../php/profile2.php">
+                        profile2.php
+                    </option>
+                </select>
+            </div>
+
+            <input class="btn btn-primary center-block" type="submit" value="Відправити"/>
+        </form>
+    </div>
+</body>
+</html>
