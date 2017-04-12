@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <link href="../libs/bootstrap.css" rel="stylesheet"/>
+    <link href="../css/styles.css" rel="stylesheet"/>
+    <script src="../libs/jquery.js"></script>
+    <script src="../libs/bootstrap.js"></script>
+    <script src="../js/scripts5.js"></script>
+</head>
+<body>
+    <div class="container">
+        <br/>
+        <div class="row">
+            <h3 class="text-center">Гра "Хрестики-нулики"</h3>
+        </div>   
+        <br/>
+        <div>
+            <table id="xo-table" class="center-block">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr> 
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>                                              
+    
+    <!-- Modal -->
+    <div class="modal fade" id="my-dialog" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-center">Діалогове вікно</h4>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>xoInitialize();</script>
+</body>
+</html>

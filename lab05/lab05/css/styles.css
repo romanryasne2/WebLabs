@@ -1,0 +1,15 @@
+﻿body.with-background {
+    background-image: url('../images/backimage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+table { width: 439px; }
+
+td {
+    position: relative;
+    width: 133px;
+    height: 133px;
+    border: 5px solid black;
+    background: gray;
+}
