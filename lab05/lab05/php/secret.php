@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -11,7 +11,8 @@
     <script src="../js/scripts.js"></script>
 </head>
 <body class="with-background">
-    <?php
+	<h3 class="text-center">
+		<?php
     if(isset($_COOKIE["token"])) {
         $token = $_COOKIE["token"];
         $conn = new mysqli("localhost:3310", "root", "Install_new!", "Lab05");
@@ -31,11 +32,12 @@
         $sql = "SELECT FirstName, LastName FROM Users Where Users.ID = '{$id}';";
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
-        echo "Hi {$row["FirstName"]} {$row["LastName"]}! There is no secret!"; 
+        echo "Hi {$row["FirstName"]} {$row["LastName"]}! There is no secret!";
     }
     else {
-        echo "You are not authenticefefated.";
+        echo "You are not authenticated.";
     }
-    ?>
+        ?>			
+	</h3>
 </body>
 </html>

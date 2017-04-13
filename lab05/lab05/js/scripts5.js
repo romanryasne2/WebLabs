@@ -55,7 +55,7 @@ function tableText(cell) {
                 $("#my-dialog").modal("show");
             }
             if (response.rez <= 0) {
-                var cell = $("#xo-table")[0].rows[response.row].cells[response.cell];
+                const cell = $("#xo-table")[0].rows[response.row].cells[response.cell];
                 $(cell).html('<img src="../images/cross.png" alt="Хрестик"/>');
                 $(cell).prop("onclick", null).off("click");
                 matrix[$(cell).closest("tr").index()][$(cell).index()] = -1;
@@ -68,9 +68,38 @@ function validatePassword() {
     if ($("input[name=password]").val() !== $("#check").val()) {
         $("#check")[0].setCustomValidity("Паролі не збігаються");
         return false;
-    }
-    else {
+    } else {
         $("#check")[0].setCustomValidity("");
         return true;
     }
+}
+
+function registerNewUser(event) {
+    event.preventDefault();
+    const posting = $.post("../php/sign-up.php",
+    {
+        firstName: $("input[name=firstName]").val(),
+        lastName: $("input[name=lastName]").val(),
+        email: $("input[name=email]").val(),
+        password: $("input[name=password]").val()
+    });
+    posting.done(function (response) {
+        response = JSON.parse(response);
+        $(".modal-body > p").text(response.result);
+        $("#my-dialog").modal("show");
+    });
+}
+
+function logIn(event) {
+    event.preventDefault();
+    const posting = $.post("../php/log-in.php",
+        {
+            username: $("input[name=username]").val(),
+            password: $("input[name=password]").val()
+        });
+    posting.done(function (response) {
+        response = JSON.parse(response);
+        $(".modal-body > p").text(response.result);
+        $("#my-dialog").modal("show");
+    });
 }

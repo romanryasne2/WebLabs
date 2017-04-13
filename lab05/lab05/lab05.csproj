@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57776F2E-81CF-48A8-941B-25FDF2DA2E92}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>lab05</RootNamespace>
+    <AssemblyName>lab05</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\styles.css" />
+    <Content Include="php\secret.php" />
+    <Content Include="html\log-in.html" />
+    <Content Include="html\sign-up.html" />
+    <Content Include="html\ask-information.html" />
+    <Content Include="html\files-upload.html" />
+    <Content Include="html\greeting.html" />
+    <Content Include="html\images.html" />
+    <Content Include="html\ajax.html" />
+    <Content Include="html\jquery.html" />
+    <Content Include="html\login.html" />
+    <Content Include="html\x-o.html" />
+    <Content Include="html\text-analyzer.html" />
+    <Content Include="html\reverse-text.html" />
+    <Content Include="images\backimage.jpg" />
+    <Content Include="images\cross.png" />
+    <Content Include="images\cursor.jpg" />
+    <Content Include="images\image1.jpg" />
+    <Content Include="images\image2.jpg" />
+    <Content Include="images\onhover-image.jpg" />
+    <Content Include="images\static-image.jpg" />
+    <Content Include="images\zero.png" />
+    <Content Include="index.html" />
+    <Content Include="js\scripts.js" />
+    <Content Include="js\scripts3.js" />
+    <Content Include="js\scripts4.js" />
+    <Content Include="js\scripts5.js" />
+    <Content Include="libs\bootstrap.css" />
+    <Content Include="libs\bootstrap.js" />
+    <Content Include="libs\jquery.js" />
+    <None Include="php\log-in.php" />
+    <None Include="php\sign-up.php" />
+    <None Include="php\x-o.php" />
+    <None Include="php\analyz-text.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="json\data4.json" />
+    <None Include="php\authorization.php" />
+    <None Include="php\profile.php" />
+    <None Include="php\profile2.php" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

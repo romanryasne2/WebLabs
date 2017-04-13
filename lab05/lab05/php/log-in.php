@@ -2,14 +2,14 @@
 $email = $_POST["username"];
 $conn = new mysqli("localhost:3310", "root", "Install_new!", "Lab05");
 if ($conn->connect_error){
-	echo "Database is unavailable.";
+	echo json_encode(["result" => "Database is unavailable."]);
 	return;
 }
 $sql = "SELECT Password, ID FROM Users Where Users.Email = '{$email}';";
 $result = $conn->query($sql);
 
 if ($result->num_rows == 0) {
-    echo "You are not registered.";
+	echo json_encode(["result" => "You are not registered."]);
 	return;
 }
 
@@ -20,14 +20,14 @@ if ($row["Password"] == $password) {
 	$result = $conn->query($sql);
 	if ($conn->query($sql) === TRUE) {
 		setcookie("token", "{$email}IsLoggedIn", time() + 86400, "/");
-		echo "You are logged in successfully.";
+		echo json_encode(["result" => "You are logged in successfully."]);
 	}
 	else {
-		echo "Database is unavailable";
+		echo json_encode(["result" => "Database is unavailable."]);
 	}
 
 }
 else {
-	echo "Password is incorrect.";
+	echo json_encode(["result" => "Password is incorrect."]);
 }
 ?>
