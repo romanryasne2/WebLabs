@@ -1,0 +1,16 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(to bottom right, blue, black);
+}
+
+h1, label {
+    color: white;
+}
+
+table {
+    background-color: wheat;
+}
