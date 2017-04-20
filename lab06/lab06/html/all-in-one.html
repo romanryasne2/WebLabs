@@ -18,24 +18,24 @@
             <ul class="nav navbar-nav">
                 <li><a href="create.html">Create</a></li>
                 <li><a href="read.html">Read</a></li>
-                <li><a href="#">Update</a></li>
+                <li><a href="update.html">Update</a></li>
                 <li><a href="delete.html">Delete</a></li>
-                <li><a href="all-in-one.html">All in one</a></li>
+                <li><a href="#">All in one</a></li>
             </ul>
         </div>
     </nav>	
     <div class="container">
-        <h1 class="text-center">Check records to delete</h1>    
+        <h1 class="text-center">Modificate data</h1>    
         <table id="table" class="table table-bordered table-striped">
             <tr>
                 <th>Id</th>
                 <th>First name</th>
-                <th>Last name</th> 
+                <th>Last name</th>
                 <th>Age</th>
+                <th>Update action</th>
+                <th>Delete action</th>
             </tr>
         </table>     
-
-        <input class="btn btn-primary center-block" type="submit" value="Delete" onclick="deleteRecords();">
     </div>     
                 
     <!-- Modal -->
@@ -46,7 +46,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">x</button>
-                    <h4 class="modal-title text-center">Result of DELETE operation</h4>
+                    <h4 class="modal-title text-center">Result of modification</h4>
                 </div>
                 <div class="modal-body">
                     <p></p>
@@ -59,6 +59,6 @@
         </div>
     </div>
 
-    <script>window.onload = readToDelete;</script>
+    <script>window.onload = readToAllInOne;</script>
 </body>
 </html>

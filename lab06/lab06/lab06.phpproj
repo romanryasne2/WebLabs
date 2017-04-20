@@ -48,6 +48,7 @@
   <ItemGroup>
     <Content Include="css\styles.css" />
     <Content Include="html\delete.html" />
+    <Content Include="html\all-in-one.html" />
     <Content Include="html\update.html" />
     <Content Include="html\read.html" />
     <Content Include="html\create.html" />

@@ -12,6 +12,6 @@
 	}
 
     function dbError() {
-        returnResult("Database is not available.");
+        returnResult("Something went wrong with database. Check input data or try again later.");
     }
 ?>
